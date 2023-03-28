@@ -1,1 +1,23 @@
 site_name: ペパカレ Android
+site_description: ペパカレ Android のカリキュラム用にテキストを置いたり課題を提出してもらうリポジトリです。
+theme:
+  name: material
+  language: ja
+  logo: android.png
+  favicon: android.png
+  palette:
+    scheme: default
+    primary: blue
+    accent: orange
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  features:
+    - tabs
+plugins:
+  - search:
+      lang: ja
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.magiclink
