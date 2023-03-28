@@ -1,5 +1,6 @@
 site_name: ペパカレ Android
 site_description: ペパカレ Android のカリキュラム用にテキストを置いたり課題を提出してもらうリポジトリです。
+site_author: GMO Pepabo, Inc.
 theme:
   name: material
   language: ja
@@ -9,9 +10,6 @@ theme:
     scheme: default
     primary: blue
     accent: orange
-    toggle:
-      icon: material/brightness-7
-      name: Switch to dark mode
   features:
     - tabs
 plugins:
