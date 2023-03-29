@@ -125,3 +125,12 @@ class Wheel {
 ```
 
 OOP を使うことでより大規模かつ複雑なプログラムを効率的に開発することができます。初心者でもオブジェクト指向プログラミングを学ぶことでより柔軟なコードを書くことができ、バグを減らすことができるなど、プログラミングスキルの向上につながるでしょう。
+
+### 参考
+
+- [プログラミング・パラダイム - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0)
+- [オブジェクト指向 - Wikipedia](https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91)
+- [オブジェクト指向の基礎 - YouTube](https://www.youtube.com/watch?v=nPAoPVwrD7s&list=PL0BiAlg8j4ZuDSu9GLU73-CVFgenU8T2P)
+- [新人プログラマに知っておいてもらいたい人類がオブジェクト指向を手に入れるまでの軌跡 - Qiita](https://qiita.com/hirokidaichi/items/591ad96ab12938878fe1)
+- [[初心者]オブジェクト指向でなぜつくるのか - Qiita](https://qiita.com/IZUMIRU/items/959b43dc9eb4f5cdc202)
+- [オブジェクト指向が5000%理解できる記事 - Qiita](https://qiita.com/tip1t/items/b2f8e39d7cc23ad505f9)
