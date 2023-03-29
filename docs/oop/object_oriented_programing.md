@@ -1,3 +1,9 @@
+---
+title: オブジェクト指向プログラミング
+description: オブジェクト指向プログラミングの特徴についてを学びます。
+author: tick-taku
+---
+
 # オブジェクト指向プログラミング
 
 ## オブジェクト指向プログラミング (Object-Oriented Programming, OOP) とは
