@@ -8,7 +8,7 @@ https://pages.git.pepabo.com/pepabo/pepabo-college-android/
 
 ## ローカルで確認する場合
 
-MkDocs を使っています。
+[MkDocs](https://www.mkdocs.org/) を使っています。
 
 ### Python のインストール
 
@@ -27,11 +27,21 @@ pip 22.2.2 from /opt/homebrew/lib/python3.10/site-packages/pip (python 3.10)
 
 ### MkDocs のインストール
 
-MkDocs の拡張の mkdocs-material を使っているのでインストールしてください。
+MkDocs の拡張の [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) を使っているのでインストールしてください。mkdocs もバンドルされています。
 
-`pip install mkdocs-material`
+```
+$ pip install mkdocs-material
+```
 
 ### ローカル環境の起動
 
-`mkdocs.yml` がある階層で `mkdocs serve` を叩きます。
+`mkdocs.yml` がある階層でコマンドを叩きます。docs 配下 md ファイルが対象になります。
+
+```
+# たぶん serve するだけで md ファイルの更新拾ってくれるので build しなくていいかも
+$ mkdocs build --clean
+
+$ mkdocs serve
+```
+
 起動できたら localhost の URL がダンプされるのでアクセスすると見れます。
