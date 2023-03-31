@@ -1,6 +1,8 @@
 site_name: ペパカレ Android
 site_description: ペパカレ Android のカリキュラム用にテキストを置いたり課題を提出してもらうリポジトリです。
 site_author: GMO Pepabo, Inc.
+repo_name: pepabo/pepabo-college-android
+repo_url: https://git.pepabo.com/pepabo/pepabo-college-android
 nav:
 - ホーム: index.md
 - オブジェクト指向プログラミング:
@@ -15,7 +17,12 @@ theme:
     primary: blue
     accent: orange
   features:
-    - tabs
+    - navigation.tabs
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - header.autohide
 plugins:
   - search:
       lang: ja
