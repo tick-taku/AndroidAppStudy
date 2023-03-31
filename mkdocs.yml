@@ -8,8 +8,8 @@ nav:
 theme:
   name: material
   language: ja
-  logo: android.png
-  favicon: android.png
+  logo: img/android.png
+  favicon: img/favicon.svg
   palette:
     scheme: default
     primary: blue
