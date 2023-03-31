@@ -1,6 +1,10 @@
 site_name: ペパカレ Android
 site_description: ペパカレ Android のカリキュラム用にテキストを置いたり課題を提出してもらうリポジトリです。
 site_author: GMO Pepabo, Inc.
+nav:
+- ホーム: index.md
+- オブジェクト指向プログラミング:
+  - オブジェクト指向プログラミングとは: oop/object_oriented_programing.md
 theme:
   name: material
   language: ja
