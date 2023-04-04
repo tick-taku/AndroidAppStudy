@@ -5,6 +5,8 @@ repo_name: pepabo/pepabo-college-android
 repo_url: https://git.pepabo.com/pepabo/pepabo-college-android
 nav:
 - ホーム: index.md
+- 環境構築:
+  - Java のセットアップ: env/java_environment.md
 - オブジェクト指向プログラミング:
   - オブジェクト指向プログラミングとは: oop/object_oriented_programing.md
 theme:
