@@ -99,10 +99,10 @@ $ sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/Ja
 
 ### `openjdk11` の PATH を通す
 
-こちらもコマンドが表示されているので実行します。既に zshrc が存在する場合は追記しましょう。bash の場合は bashrc です。たぶん。
+こちらも何をするかが表示されています。以下の PATH を zshrc に追記しましょう。bash の場合は bashrc です。たぶん。もし zshrc がない場合は echo を出力するコマンドが表示されているのでそれを実行してください。
 
 ```
-$ echo 'export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"' >> ~/.zshrc
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 ```
 
 ### 動作確認
