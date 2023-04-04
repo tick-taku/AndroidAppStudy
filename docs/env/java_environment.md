@@ -12,7 +12,7 @@ Android アプリ開発を行うために Java が動く必要があります。
 
 ## Java に関連する用語集
 
-セットアップを行う前に Java を触る上で必要な単語を理解しておきましょう。
+セットアップを行う前に Java を触る上で必要な単語を理解しておきましょう。ちなみに `OpenJDK` は Java のオープンソース版みたいなものです。
 
 - [Android の実行環境 - Qiita](https://qiita.com/tick-taku/items/ea3dd528030f4992b64d)
 
