@@ -9,6 +9,7 @@ nav:
   - Java のセットアップ: env/java_environment.md
 - オブジェクト指向プログラミング:
   - オブジェクト指向プログラミングとは: oop/object_oriented_programing.md
+  - Java で動かしてみよう: oop/java_foundation.md
 theme:
   name: material
   language: ja
