@@ -1,2 +1,2 @@
 PyYAML
-mkdocs-material==9.1.4
+mkdocs-material==9.1.18
