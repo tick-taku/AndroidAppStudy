@@ -1,10 +1,10 @@
-# ペパカレ Android
+# Android App Study
 
-ペパカレ Android 学習カリキュラムのテキスト用リポジトリです。
+Android 学習カリキュラムのテキスト用リポジトリです。
 
 ## URL
 
-https://pages.git.pepabo.com/pepabo/pepabo-college-android/
+https://tick-taku.github.io/AndroidAppStudy/
 
 ## ローカルで確認する場合
 

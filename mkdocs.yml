@@ -1,8 +1,8 @@
-site_name: ペパカレ Android
-site_description: ペパカレ Android のカリキュラム用にテキストを置いたり課題を提出してもらうリポジトリです。
-site_author: GMO Pepabo, Inc.
-repo_name: pepabo/pepabo-college-android
-repo_url: https://git.pepabo.com/pepabo/pepabo-college-android
+site_name: Android App Study
+site_description: これから Android アプリ開発をする人向けのハンズオンをまとめています。
+site_author: tick-taku
+repo_name: tick-taku/AndroidAppStudy
+repo_url: https://github.com/tick-taku/AndroidAppStudy
 nav:
 - ホーム: index.md
 - 環境構築:
