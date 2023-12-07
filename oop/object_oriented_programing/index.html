@@ -1,0 +1,697 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="オブジェクト指向プログラミングの特徴についてを学びます。">
+      
+      
+        <meta name="author" content="tick-taku">
+      
+      
+      
+        <link rel="prev" href="../../env/java_environment/">
+      
+      
+        <link rel="next" href="../java_foundation/">
+      
+      <link rel="icon" href="../../img/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>オブジェクト指向プログラミングの概要 - Android App Study</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Android App Study" class="md-header__button md-logo" aria-label="Android App Study" data-md-component="logo">
+      
+  <img src="../../img/android.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Android App Study
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              オブジェクト指向プログラミングの概要
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tick-taku/AndroidAppStudy" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tick-taku/AndroidAppStudy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      ホーム
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../env/java_environment/" class="md-tabs__link">
+        環境構築
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        オブジェクト指向プログラミング
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Android App Study" class="md-nav__button md-logo" aria-label="Android App Study" data-md-component="logo">
+      
+  <img src="../../img/android.png" alt="logo">
+
+    </a>
+    Android App Study
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tick-taku/AndroidAppStudy" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tick-taku/AndroidAppStudy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        ホーム
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          環境構築
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          環境構築
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../env/java_environment/" class="md-nav__link">
+        Java のセットアップ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          オブジェクト指向プログラミング
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          オブジェクト指向プログラミング
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          オブジェクト指向プログラミングとは
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        オブジェクト指向プログラミングとは
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-oriented-programming-oop" class="md-nav__link">
+    オブジェクト指向プログラミング (Object-Oriented Programming, OOP) とは
+  </a>
+  
+    <nav class="md-nav" aria-label="オブジェクト指向プログラミング (Object-Oriented Programming, OOP) とは">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    カプセル化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    継承
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ポリモーフィズム
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java_foundation/" class="md-nav__link">
+        Java で動かしてみよう
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">オブジェクト指向プログラミング</h1>
+<p>オブジェクト指向について今は理解できなくても大丈夫です。これから様々な説明を見たりコードを書いていく中で納得するタイミングが来ますので、そのときにリフレインしてみてください。</p>
+<h2 id="object-oriented-programming-oop">オブジェクト指向プログラミング (Object-Oriented Programming, OOP) とは</h2>
+<p>プログラミングにおける一種のパラダイムであり、複雑なソフトウェアをより簡単かつ効率的に開発することを目的としています。</p>
+<p>オブジェクト指向プログラミング (以下、OOP) では、プログラムがオブジェクトと呼ばれる独立した部品から構成されると考えます。これらのオブジェクトは、データ（プロパティ）や関数（メソッド）をまとめたものであり、互いに連携して動作することでプログラム全体が機能します。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>プログラミングパラダイム</strong>とは、プログラムを記述する際の基本的なアプローチやスタイルのことを指します。各々異なる特徴や利点があり、開発者が問題を解決するために適切なツールとして選択することが重要です。オブジェクト指向の他にいくつかの例を挙げます。</p>
+<ul>
+<li><code>手続き型プログラミング</code><ul>
+<li>プログラムの状態を変更する手続きや関数のシーケンスで構成されます。主にC言語などで使われています。</li>
+</ul>
+</li>
+<li><code>関数型プログラミング</code><ul>
+<li>関数に組み合わせによってプログラムを構成するプログラミングパラダイムです。主に Scala などで使われています。</li>
+</ul>
+</li>
+<li>`リアクティブ・プログラミング<ul>
+<li>イベントストリームを使用して、非同期的なデータフローに焦点を当てたプログラミングパラダイムです。</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>OOP の特徴として、<code>カプセル化</code>・<code>継承</code>・<code>ポリモーフィズム</code>があります。</p>
+<hr />
+<h3 id="_2">カプセル化</h3>
+<p><strong>オブジェクトの内部状態を隠蔽し外部からのアクセスを制限することで、安全に保護すること</strong>です。具体的には、オブジェクトのフィールドに対して直接アクセスできないようにし、代わりにメソッドを通じてフィールドの値を取得・設定することが一般的です。</p>
+<p>カプセル化によるメリットは、以下のようになります。</p>
+<ol>
+<li>内部状態を保護することができるため、外部からの不正なアクセスによる<strong>データの破壊や不整合を防ぐことができます</strong>。</li>
+<li>外部からアクセスできるメソッドを制限することで、オブジェクトの使用方法を明確に定義することができます。これによりオブジェクトの使用者が<strong>不正な操作を行うことを防ぎ、コードの信頼性を高めることができます</strong>。</li>
+<li>内部実装を変更することができるため、オブジェクトの利用者に影響を与えることなく、オブジェクトの実装を改良することができます。つまり、オブジェクトの実装の詳細を隠蔽することにより、<strong>プログラム全体を柔軟に変更できるようになります</strong>。</li>
+</ol>
+<p>カプセル化は OOP において重要な概念であり特徴的なメリットの一つと言えます。</p>
+<h3 id="_3">継承</h3>
+<p><strong>既存のオブジェクトから新しいオブジェクトを作成することで、コードの再利用性を高めること</strong>です。</p>
+<p>継承の元となるクラスのことを<code>親クラス</code>、継承先のことを<code>小クラス</code>と呼び、親クラスで定義されたメソッドや変数などの機能を子クラスでも利用することができます。子クラスは親クラスのメンバ変数やメソッドをそのまま使ったりカスタマイズしたり、新しい機能を追加したりすることができます。</p>
+<p><strong>継承によりコードの再利用性や保守性が向上し、コードの冗長性を減らすことができます</strong>。また継承の階層を深くすることで、より複雑なオブジェクトを表現することもできます。これは実際にコードを見てみないことにはメリットの理解が少し難しいかもしれません。</p>
+<h3 id="_4">ポリモーフィズム</h3>
+<p><strong>同じインターフェースを持つオブジェクトがそれぞれ異なる実装を持つことができる性質のこと</strong>を指します。</p>
+<p>具体的には、同じ親クラスを継承した子クラスのインスタンスが、同じメソッド名を持ちながらそれぞれ異なる実装を持つこと（<code>オーバーライド</code>）や同一クラス内で引数の違いによってメソッドを呼び分けること（<code>オーバーロード</code>）ができます。これによりメソッドを状況によって使い分けることができ、コードの柔軟性や拡張性、保守性も向上します。</p>
+<hr />
+<h3 id="_5">例</h3>
+<p>例えば、自動車のプログラムを考えてみましょう。自動車は、車体やエンジン、タイヤなどの部品から構成されています。OOP の観点からは、それぞれの部品がオブジェクトとして表現され、自動車オブジェクトはこれらの部品オブジェクトを持っていると考えます。そして、自動車オブジェクトは、エンジンを動かす関数やアクセルを踏む（加速する）関数、ブレーキをかける（減速する）関数などのメソッドを持っており、これらのメソッドを呼び出すことで自動車が動作するようになっています。</p>
+<p>実際に運転するとき速度は運転者が直接設定することはできず、自動車はアクセルを踏むことで加速し前に進みます。このアクセルを踏んだとき、自動車の内部ではガソリンを供給してエンジンを動かしてタイヤを回した結果速度が上昇するといった一連のフローを慎重に制御する必要があり、順番を無視して動かしてしまうと壊れてしまうかもしれません。ですが実際には運転者は自動車がどうやって車を動かしているかは知る必要がなく、ただアクセルを踏むだけで加速させる（前に進ませる）ことができます。また、もしエンジンを交換して内部のフローが変わったとしても、運転者はアクセルを踏めば加速することさえわかっていれば問題ありません。これがカプセル化です。</p>
+<p><img alt="カプセル化" src="../img/oop_coupsulation.png" /></p>
+<p>さらに自動車には SUV やトラック、スポーツカーなど異なる種類のものがあります。これらはそれぞれに独自の特徴や機能がありますが、自動車という共通の機能を持っています。そのため１から自動車の設計を考える必要はなく、自動車と言う既に存在する機能を元に設計することができます。これは自動車というオブジェクトを継承してそれぞれのオブジェクトを作っていることになります。</p>
+<p><img alt="継承" src="../img/oop_extends.png" /></p>
+<p>また自動車は乗り物であり、乗り物は車体があり加速・減速するメソッドを共通して持っています。しかし、同じ乗り物でも自転車はペダルを漕ぐことで動きますが自動車はエンジンを使って動くため、同じ <code>加速</code> メソッドでも内部の処理は異なります。これがポリモーフィズムです。</p>
+<p><img alt="ポリモーフィズム" src="../img/oop_polymorphism.png" /></p>
+<p>クラス図にするとこうなります。</p>
+<pre class="mermaid"><code>classDiagram
+
+Engine *-- Wheel
+Car *-- Body
+Car *-- Engine
+Bicycle *-- Body
+Bicycle *-- Wheel
+Vehicle &lt;|.. Car
+Vehicle &lt;|.. Bicycle
+
+class Vehicle {
+  &lt;&lt;interface&gt;&gt;
+  - int speed
+  - Body body
+  + void accelerate()
+  + void break()
+}
+
+class Bicycle {
+  - int speed
+  - Body body
+  - Wheel wheel
+  + void accelerate()
+  + void break()
+}
+
+class Car {
+  - int speed
+  - Body body
+  - Engine engine
+  - Wheel wheel
+  + void accelerate()
+  + void break()
+  + void turnOn()
+  + void turnOff()
+}
+
+class Engine {
+  - String type
+  - String fuel
+  - boolean isRunning
+  + void accelerate()
+  + void break()
+  + void turnOn()
+  + void turnOff()
+}
+
+class Body {
+  - int width
+  - int height
+  - int length
+  - String material
+}
+
+class Wheel {
+  - String material
+  - int size
+  + void rotate()
+}</code></pre>
+<p>OOP を使うことでより大規模かつ複雑なプログラムを効率的に開発することができます。初心者でもオブジェクト指向プログラミングを学ぶことでより柔軟なコードを書くことができ、バグを減らすことができるなど、プログラミングスキルの向上につながるでしょう。</p>
+<p>上記の説明だけを見てきっちり理解するのは無理だと思います。<strong>概念の説明やパターンも複数見る</strong>うちに共通点・相違点から輪郭が見えてくるはずです。</p>
+<h3 id="_6">参考</h3>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0">プログラミング・パラダイム - Wikipedia</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91">オブジェクト指向 - Wikipedia</a></li>
+<li><a href="https://www.youtube.com/watch?v=nPAoPVwrD7s&amp;list=PL0BiAlg8j4ZuDSu9GLU73-CVFgenU8T2P">オブジェクト指向の基礎 - YouTube</a></li>
+<li><a href="https://qiita.com/hirokidaichi/items/591ad96ab12938878fe1">新人プログラマに知っておいてもらいたい人類がオブジェクト指向を手に入れるまでの軌跡 - Qiita</a></li>
+<li><a href="https://qiita.com/IZUMIRU/items/959b43dc9eb4f5cdc202">[初心者]オブジェクト指向でなぜつくるのか - Qiita</a></li>
+<li><a href="https://qiita.com/tip1t/items/b2f8e39d7cc23ad505f9">オブジェクト指向が5000%理解できる記事 - Qiita</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,666 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Java を扱う上で必要となる環境をセットアップします。">
+      
+      
+        <meta name="author" content="tick-taku">
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../oop/object_oriented_programing/">
+      
+      <link rel="icon" href="../../img/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Java のセットアップ - Android App Study</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Android App Study" class="md-header__button md-logo" aria-label="Android App Study" data-md-component="logo">
+      
+  <img src="../../img/android.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Android App Study
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Java のセットアップ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tick-taku/AndroidAppStudy" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tick-taku/AndroidAppStudy
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      ホーム
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        環境構築
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../oop/object_oriented_programing/" class="md-tabs__link">
+        オブジェクト指向プログラミング
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Android App Study" class="md-nav__button md-logo" aria-label="Android App Study" data-md-component="logo">
+      
+  <img src="../../img/android.png" alt="logo">
+
+    </a>
+    Android App Study
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tick-taku/AndroidAppStudy" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tick-taku/AndroidAppStudy
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        ホーム
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          環境構築
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          環境構築
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java のセットアップ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Java のセットアップ
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    Java に関連する用語集
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_2" class="md-nav__link">
+    Java のインストール
+  </a>
+  
+    <nav class="md-nav" aria-label="Java のインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openjdk" class="md-nav__link">
+    インストールする openjdk の情報を見てみましょう
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openjdk11" class="md-nav__link">
+    openjdk11 をインストールしてみましょう
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openjdk11_1" class="md-nav__link">
+    openjdk11 のシンボリックリンクを作成する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openjdk11-path" class="md-nav__link">
+    openjdk11 の PATH を通す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    動作確認
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          オブジェクト指向プログラミング
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          オブジェクト指向プログラミング
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/object_oriented_programing/" class="md-nav__link">
+        オブジェクト指向プログラミングとは
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/java_foundation/" class="md-nav__link">
+        Java で動かしてみよう
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="java">Java のセットアップ</h1>
+<p>Android アプリ開発を行うために Java が動く必要があります。ここでは Java のセットアップから Android Studio でビルドできるまでの環境構築を行います。</p>
+<p><strong>macOS でのセットアップしか説明していません！<a href="https://brew.sh/index_ja">Homebrew</a> がインストールされているか確認してください。</strong> またシェルは <a href="https://zsh.sourceforge.io/Arc/source.html">zsh</a> を想定していますがおそらく何でも大丈夫だと思います。</p>
+<h2 id="java_1">Java に関連する用語集</h2>
+<p>セットアップを行う前に Java を触る上で必要な単語を理解しておきましょう。ちなみに <code>OpenJDK</code> は Java のオープンソース版みたいなものです。</p>
+<ul>
+<li><a href="https://qiita.com/tick-taku/items/ea3dd528030f4992b64d">Android の実行環境 - Qiita</a></li>
+</ul>
+<h2 id="java_2">Java のインストール</h2>
+<p><strong>Android 開発に必要になるのは Java 11</strong> なので <code>openjdk11</code> をインストールします。以下の流れで進めていきます。</p>
+<ol>
+<li>インストールする openjdk の情報を見てみましょう。</li>
+<li><code>openjdk11</code> をインストールしてみましょう。</li>
+<li><code>openjdk11</code> のシンボリックリンクを作成する</li>
+<li><code>openjdk11</code> の PATH を通す</li>
+<li>動作確認</li>
+</ol>
+<h3 id="openjdk">インストールする openjdk の情報を見てみましょう</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>search<span class="w"> </span><span class="nv">openjdk</span>
+
+<span class="o">==</span>&gt;<span class="w"> </span>Formulae
+openjdk@11<span class="w">                         </span>openjdk<span class="w"> </span>✔<span class="w">                          </span>openjdk@17<span class="w">                         </span>openjdk@8
+
+<span class="o">==</span>&gt;<span class="w"> </span>Casks
+openttd
+</code></pre></div>
+<p>今インストールできる openjdk がリストアップされますが、今回必要なのは <code>openjdk11</code> なのでバージョンを指定して見てみます。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>info<span class="w"> </span>openjdk@11
+
+<span class="o">==</span>&gt;<span class="w"> </span>openjdk@11:<span class="w"> </span>stable<span class="w"> </span><span class="m">11</span>.0.18<span class="w"> </span><span class="o">(</span>bottled<span class="o">)</span><span class="w"> </span><span class="o">[</span>keg-only<span class="o">]</span>
+Development<span class="w"> </span>kit<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>Java<span class="w"> </span>programming<span class="w"> </span>language
+https://openjdk.java.net/
+Not<span class="w"> </span>installed
+From:<span class="w"> </span>https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/openjdk@11.rb
+License:<span class="w"> </span>GPL-2.0-only
+<span class="o">==</span>&gt;<span class="w"> </span>Dependencies
+Build:<span class="w"> </span>autoconf<span class="w"> </span>✔,<span class="w"> </span>pkg-config<span class="w"> </span>✔
+Required:<span class="w"> </span>giflib<span class="w"> </span>✔,<span class="w"> </span>harfbuzz<span class="w"> </span>✘,<span class="w"> </span>jpeg-turbo<span class="w"> </span>✔,<span class="w"> </span>libpng<span class="w"> </span>✔,<span class="w"> </span>little-cms2<span class="w"> </span>✔
+<span class="o">==</span>&gt;<span class="w"> </span>Caveats
+For<span class="w"> </span>the<span class="w"> </span>system<span class="w"> </span>Java<span class="w"> </span>wrappers<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>this<span class="w"> </span>JDK,<span class="w"> </span>symlink<span class="w"> </span>it<span class="w"> </span>with
+<span class="w">  </span>sudo<span class="w"> </span>ln<span class="w"> </span>-sfn<span class="w"> </span>/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk<span class="w"> </span>/Library/Java/JavaVirtualMachines/openjdk-11.jdk
+
+openjdk@11<span class="w"> </span>is<span class="w"> </span>keg-only,<span class="w"> </span>which<span class="w"> </span>means<span class="w"> </span>it<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>symlinked<span class="w"> </span>into<span class="w"> </span>/opt/homebrew,
+because<span class="w"> </span>this<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>alternate<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>another<span class="w"> </span>formula.
+
+For<span class="w"> </span>the<span class="w"> </span>system<span class="w"> </span>Java<span class="w"> </span>wrappers<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>this<span class="w"> </span>JDK,<span class="w"> </span>symlink<span class="w"> </span>it<span class="w"> </span>with
+<span class="w">  </span>sudo<span class="w"> </span>ln<span class="w"> </span>-sfn<span class="w"> </span>/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk<span class="w"> </span>/Library/Java/JavaVirtualMachines/openjdk-11.jdk
+</code></pre></div>
+<p><code>openjdk11</code> がインストールできることが確認できましたね。</p>
+<h3 id="openjdk11"><code>openjdk11</code> をインストールしてみましょう</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>openjdk@11
+
+<span class="o">==</span>&gt;<span class="w"> </span>openjdk@11
+For<span class="w"> </span>the<span class="w"> </span>system<span class="w"> </span>Java<span class="w"> </span>wrappers<span class="w"> </span>to<span class="w"> </span>find<span class="w"> </span>this<span class="w"> </span>JDK,<span class="w"> </span>symlink<span class="w"> </span>it<span class="w"> </span>with
+<span class="w">  </span>sudo<span class="w"> </span>ln<span class="w"> </span>-sfn<span class="w"> </span>/opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk<span class="w"> </span>/Library/Java/JavaVirtualMachines/openjdk-11.jdk
+
+openjdk@11<span class="w"> </span>is<span class="w"> </span>keg-only,<span class="w"> </span>which<span class="w"> </span>means<span class="w"> </span>it<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>symlinked<span class="w"> </span>into<span class="w"> </span>/opt/homebrew,
+because<span class="w"> </span>this<span class="w"> </span>is<span class="w"> </span>an<span class="w"> </span>alternate<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>another<span class="w"> </span>formula.
+
+If<span class="w"> </span>you<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>have<span class="w"> </span>openjdk@11<span class="w"> </span>first<span class="w"> </span><span class="k">in</span><span class="w"> </span>your<span class="w"> </span>PATH,<span class="w"> </span>run:
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;/opt/homebrew/opt/openjdk@11/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</code></pre></div>
+<p>無事インストールできたら最後の方に表示されているメッセージを確認してみましょう。</p>
+<p>まず info の時点でも出ていたと思いますが <code>openjdk@11 is keg-only</code> と表示されていると思います。<a href="https://zenn.dev/fujishiro/scraps/d311a91daccb1d"><code>keg-only</code> とは <strong>インストールのみでシンボリックリンクは作成しない</strong>設定です</a>。シンボリックリンクはファイルやディレクトリへのエイリアスのようなものです。</p>
+<p>続いて PATH を通しましょうと言うメッセージが表示されています。PATH を通さないとコマンドを実行しても対応するプログラムを探せません。</p>
+<p>なのでまずはこの2つを対応しましょう。</p>
+<h3 id="openjdk11_1"><code>openjdk11</code> のシンボリックリンクを作成する</h3>
+<p>シンボリックリンクの作成のコマンドはメッセージの下に表示されていますのでそれを実行しましょう。</p>
+<div class="highlight"><pre><span></span><code>$ sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+</code></pre></div>
+<h3 id="openjdk11-path"><code>openjdk11</code> の PATH を通す</h3>
+<p>こちらも何をするかが表示されています。以下の PATH を zshrc に追記しましょう。bash の場合は bashrc です。たぶん。もし zshrc がない場合は echo を出力するコマンドが表示されているのでそれを実行してください。</p>
+<div class="highlight"><pre><span></span><code>export PATH=&quot;/opt/homebrew/opt/openjdk@11/bin:$PATH&quot;
+</code></pre></div>
+<h3 id="_1">動作確認</h3>
+<p>設定ファイルを読み込みなおして JDK の <code>java</code> コマンドを入力してみましょう。バージョンを確認してみて info で表示されたものと一致していれば成功です。</p>
+<div class="highlight"><pre><span></span><code>$ source ~/.zshrc
+$ java --version
+
+openjdk 11.0.18 2023-01-17
+OpenJDK Runtime Environment Homebrew (build 11.0.18+0)
+OpenJDK 64-Bit Server VM Homebrew (build 11.0.18+0, mixed mode)
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            ページトップへ戻る
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
